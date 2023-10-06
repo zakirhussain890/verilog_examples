@@ -1,0 +1,27 @@
+digraph "fa" {
+label="fa";
+rankdir="LR";
+remincross=true;
+n1 [ shape=octagon, label="a", color="black", fontcolor="black" ];
+n2 [ shape=octagon, label="b", color="black", fontcolor="black" ];
+n3 [ shape=octagon, label="cin", color="black", fontcolor="black" ];
+n4 [ shape=octagon, label="co", color="black", fontcolor="black" ];
+n5 [ shape=diamond, label="co1", color="black", fontcolor="black" ];
+n6 [ shape=diamond, label="co2", color="black", fontcolor="black" ];
+n7 [ shape=octagon, label="sum", color="black", fontcolor="black" ];
+n8 [ shape=diamond, label="sum1", color="black", fontcolor="black" ];
+c12 [ shape=record, label="{{<p9> A|<p10> SLEEP}|$90\nsky130_fd_sc_hd__lpflow_inputiso1p_1|{<p11> X}}",  ];
+c13 [ shape=record, label="{{<p1> a|<p2> b}|ins1\nha|{<p4> co|<p7> sum}}",  ];
+c14 [ shape=record, label="{{<p1> a|<p2> b}|ins2\nha|{<p4> co|<p7> sum}}",  ];
+n1:e -> c13:p1:w [color="black", fontcolor="black", label=""];
+n2:e -> c13:p2:w [color="black", fontcolor="black", label=""];
+n3:e -> c14:p1:w [color="black", fontcolor="black", label=""];
+c12:p11:e -> n4:w [color="black", fontcolor="black", label=""];
+c13:p4:e -> n5:w [color="black", fontcolor="black", label=""];
+n5:e -> c12:p10:w [color="black", fontcolor="black", label=""];
+c14:p4:e -> n6:w [color="black", fontcolor="black", label=""];
+n6:e -> c12:p9:w [color="black", fontcolor="black", label=""];
+c14:p7:e -> n7:w [color="black", fontcolor="black", label=""];
+c13:p7:e -> n8:w [color="black", fontcolor="black", label=""];
+n8:e -> c14:p2:w [color="black", fontcolor="black", label=""];
+}

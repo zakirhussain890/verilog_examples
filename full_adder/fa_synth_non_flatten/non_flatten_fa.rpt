@@ -1,0 +1,54 @@
+
+8. Printing statistics.
+
+=== fa ===
+
+   Number of wires:                  8
+   Number of wire bits:              8
+   Number of public wires:           8
+   Number of public wire bits:       8
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  3
+     ha                              2
+     sky130_fd_sc_hd__lpflow_inputiso1p_1      1
+
+   Area for cell type \ha is unknown!
+
+   Chip area for module '\fa': 6.256000
+
+=== ha ===
+
+   Number of wires:                  4
+   Number of wire bits:              4
+   Number of public wires:           4
+   Number of public wire bits:       4
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  2
+     sky130_fd_sc_hd__and2_0         1
+     sky130_fd_sc_hd__xor2_1         1
+
+   Chip area for module '\ha': 15.014400
+
+=== design hierarchy ===
+
+   fa                                1
+     ha                              2
+
+   Number of wires:                 16
+   Number of wire bits:             16
+   Number of public wires:          16
+   Number of public wire bits:      16
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  5
+     sky130_fd_sc_hd__and2_0         2
+     sky130_fd_sc_hd__lpflow_inputiso1p_1      1
+     sky130_fd_sc_hd__xor2_1         2
+
+   Chip area for top module '\fa': 36.284800
+

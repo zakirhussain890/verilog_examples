@@ -1,0 +1,13 @@
+read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog ha.v fa.v
+synth -top fa
+#dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty sky130_fd_sc_hd__tt_025C_1v80.lib
+clean
+#flatten
+write_verilog -noattr fa_with_non_flatten.v
+write_json fa_non_flatten_netlist.json
+tee -o non_flatten_fa.rpt stat -liberty sky130_fd_sc_hd__tt_025C_1v80.lib
+show -prefix ./netlist_non_flatten_flatten -format jpeg fa
+!netlistsvg fa_non_flatten_netlist.json -o fa_non_flatten_netlist.svg
+#!dot -Tpng netlist.dot -o netlist.png
