@@ -28,6 +28,7 @@ cd
 ##Install Icarus iverilog
 ##echo "*****************************************  Installing iverilog ***********************************************"
 ##sudo apt-get install -y iverilog --assume-yes
+apt install -y autoconf gperf make gcc g++ bison flex
 git clone https://github.com/steveicarus/iverilog.git
 cd iverilog
 chmod 777 autoconf.sh 
@@ -44,7 +45,7 @@ cd
 sudo apt install npm --assume-yes
 git clone https://github.com/nturley/netlistsvg
 cd netlistsvg
-sudo npm install --legacy-peer-deps
-sudo npm install -g .
-
+sudo npm install --legacy-peer-deps --assume-yes
+sudo npm install -g . --assume-yes
+exit
 cd
